@@ -1,0 +1,138 @@
+
+:root {
+  --primary-blue: #1a56db;
+  --primary-blue-dark: #1e429f;
+  --secondary-green: #10b981;
+  --alert-red: #ef4444;
+  --warning-yellow: #f59e0b;
+  --light-bg: #f9fafb;
+  --light-card: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border-color: #e5e7eb;
+
+  /* Font mappings */
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Accessibility overrides for High Contrast / Large Fonts */
+body.accessibility-active {
+  --primary-blue: #0000ff;
+  --primary-blue-dark: #000080;
+  --secondary-green: #008000;
+  --alert-red: #ff0000;
+  --warning-yellow: #ff8c00;
+  --light-bg: #ffffff;
+  --light-card: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --border-color: #000000;
+  font-size: 1.15rem;
+}
+
+/* Base resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Dark Mode (Class based) */
+body.dark-mode:not(.accessibility-active) {
+  --light-bg: #0b0f19;
+  --light-card: #161f30;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --border-color: #243049;
+}
+
+/* High Contrast Dark Mode */
+body.dark-mode.accessibility-active {
+  --primary-blue: #8080ff;
+  --primary-blue-dark: #a0a0ff;
+  --secondary-green: #00ff00;
+  --alert-red: #ff0000;
+  --warning-yellow: #ffff00;
+  --light-bg: #000000;
+  --light-card: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --border-color: #ffffff;
+  font-size: 1.15rem;
+}
+
+/* Standard styling system classes */
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.title-font {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Animated scanning lines */
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.scan-line {
+  animation: scan 4s linear infinite;
+}
+
+/* Pulse keyframes for mic waveforms */
+@keyframes pulseHeight {
+  0%, 100% {
+    height: 10px;
+  }
+  50% {
+    height: 50px;
+  }
+}
+
+.waveform-bar {
+  animation: pulseHeight 1.2s ease-in-out infinite;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+body.dark-mode .glass {
+  background: rgba(22, 31, 48, 0.7);
+}
+
+/* Accessibility outline thickeners */
+.accessibility-active .thick-border {
+  border: 3px solid var(--border-color) !important;
+}
+
+.accessibility-active .thick-outline {
+  outline: 3px solid var(--border-color) !important;
+}
+
+.accessibility-active h1,
+.accessibility-active h2,
+.accessibility-active h3,
+.accessibility-active h4,
+.accessibility-active button {
+  font-weight: 800 !important;
+}

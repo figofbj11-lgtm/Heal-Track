@@ -1,0 +1,42 @@
+[
+    {
+        "filename": "ref_healed.jpg",
+        "status": "healed",
+        "notes": "Healthy remodeling tissue, complete skin closure, clean scar line."
+    },
+    {
+        "filename": "ref_healing.jpg",
+        "status": "healing",
+        "notes": "Granulating proliferative stage, stable recovery, normal redness."
+    },
+    {
+        "filename": "ref_infected.jpg",
+        "status": "infected",
+        "notes": "High infection risk, yellow slough and active localized inflammation."
+    },
+    {
+        "filename": "user_scratch_healed.jpg",
+        "status": "healed",
+        "notes": "Fading superficial scratch, closing well."
+    },
+    {
+        "filename": "user_scratch_healing.jpg",
+        "status": "healing",
+        "notes": "Mild to moderate skin abrasion with light crusting."
+    },
+    {
+        "filename": "user_abrasion_healing.jpg",
+        "status": "healing",
+        "notes": "Fresh skin scrape, slightly red but dry."
+    },
+    {
+        "filename": "user_ulcer_infected.jpg",
+        "status": "infected",
+        "notes": "Highly inflamed circular skin sore with active redness."
+    },
+    {
+        "filename": "user_graze_infected.jpg",
+        "status": "infected",
+        "notes": "Severe raw graze with visible redness and active fluid discharge."
+    }
+]
